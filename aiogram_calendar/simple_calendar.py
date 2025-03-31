@@ -123,7 +123,7 @@ class SimpleCalendar(GenericCalendar):
             text=self._labels.today_caption,
             callback_data=SimpleCalendarCallback(act=SimpleCalAct.today, year=year, month=month, day=day).pack()
         ))
-        kb.append(cancel_row)
+        # kb.append(cancel_row)
         return InlineKeyboardMarkup(row_width=7, inline_keyboard=kb)
 
     async def _update_calendar(self, query: CallbackQuery, with_date: datetime):
