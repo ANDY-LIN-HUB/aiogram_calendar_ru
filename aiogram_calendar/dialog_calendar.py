@@ -98,12 +98,12 @@ class DialogCalendar(GenericCalendar):
 
         kb = []
         nav_row = []
-        # nav_row.append(
-        #     InlineKeyboardButton(
-        #         text=self._labels.cancel_caption,
-        #         callback_data=DialogCalendarCallback(act=DialogCalAct.cancel, year=year, month=1, day=1).pack()
-        #     )
-        # )
+        nav_row.append(
+            InlineKeyboardButton(
+                text=self._labels.cancel_caption,
+                callback_data=DialogCalendarCallback(act=DialogCalAct.cancel, year=year, month=1, day=1).pack()
+            )
+        )
         nav_row.append(InlineKeyboardButton(
             text=str(year) if year != now_year else highlight(year),
             callback_data=DialogCalendarCallback(act=DialogCalAct.start, year=year, month=-1, day=-1).pack()
